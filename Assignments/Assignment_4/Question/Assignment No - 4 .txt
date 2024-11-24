@@ -1,0 +1,39 @@
+﻿Assignment No - 4:
+Creating a Flask CRUD Application with SQLite
+Develop a Flask web application that allows users to manage a list of tasks using a SQLite database. The application should implement Create, Read, Update, and Delete (CRUD) operations for tasks.
+1. Database Setup
+* Create a SQLite Database:
+Use the sqlite3 module to create a new SQLite database file. Ensure the database is initialized when the application starts.
+* Create a Table:
+Define a table named tasks with the following columns:
+   * id: Primary key (integer).
+   * description: Task description (text).
+   * status: Task completion status (integer, 0 for incomplete, 1 for complete).
+2. Flask Application Setup
+   * Set Up the Flask Application:
+Create a new Python file and import necessary modules like Flask, sqlite3, request, render_template, and redirect.
+3. Define Routes
+      * Home Page:
+Create a route that will display a list of all tasks retrieved from the database.
+      * Create Task:
+Define a route that allows users to add new tasks by handling form submission.
+      * Update Task:
+Define a route that enables users to modify existing tasks.
+      * Delete Task:
+Define a route that provides a way for users to delete tasks.
+4. CRUD Operations
+         * Create:
+Handle form submission to create new tasks, and insert the task data into the SQLite database. Redirect the user to the home page upon successful task creation.
+         * Read:
+Retrieve all tasks from the database and display them on the home page.
+         * Update:
+Allow users to edit existing tasks via a form, update the task description and completion status in the database, and redirect to the home page.
+         * Delete:
+Provide a form to confirm deletion of a task, remove the task from the database, and redirect to the home page.
+5. Templating
+            * Create HTML Templates:
+Use a template engine like Jinja2 to create the following templates:
+               * home.html: List all tasks.
+               * create.html: Form to create a new task.
+               * update.html: Form to update an existing task.
+               * Optional: Add a delete.html page to confirm deletion.
